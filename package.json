@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/juanca/cash-lode/issues"
   },
-  "homepage": "https://github.com/juanca/cash-lode#readme"
+  "homepage": "https://github.com/juanca/cash-lode#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
 }
