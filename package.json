@@ -1,0 +1,24 @@
+{
+  "name": "cash-lode",
+  "version": "0.0.0",
+  "description": "Webpack loader to cache expensive loader transformations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanca/cash-lode.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "cache"
+  ],
+  "author": "Juan Carlos Medina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juanca/cash-lode/issues"
+  },
+  "homepage": "https://github.com/juanca/cash-lode#readme"
+}
