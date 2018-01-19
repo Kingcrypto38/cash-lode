@@ -4,6 +4,7 @@
   "description": "Webpack loader to cache expensive loader transformations",
   "main": "index.js",
   "scripts": {
+    "e2e": "webpack --config e2e-test/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
