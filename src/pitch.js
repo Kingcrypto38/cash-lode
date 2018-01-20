@@ -4,7 +4,6 @@ const path = require('path');
 const getCachePath = require('./utils/cache-directory-path.js');
 
 module.exports = function pitch(modulePath) {
-  console.log('Looking up in cache', this.resourcePath);
   const cachePath = getCachePath(this.options.context, this.query.cacheDirectory);
 
   const cachedFileNames = this.fs.fileSystem.readdirSync(cachePath);
@@ -13,6 +12,7 @@ module.exports = function pitch(modulePath) {
   // However, first version will compute hash.
   const fileContent = this.fs.fileSystem.readFileSync(this.resourcePath);
   const fileKey = md5(fileContent);
+  console.log('Looking up in cache', this.resourcePath, 'as', fileKey);
 
   if (cachedFileNames.includes(fileKey)) {
     const cachedFilePath = path.join(cachePath, fileKey);
