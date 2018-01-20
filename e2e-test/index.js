@@ -1,1 +1,1 @@
-console.log('Hello world');
+require('./src/print-message');
