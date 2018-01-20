@@ -1,14 +1,11 @@
-const fs = require('fs');
 const md5 = require('md5');
 const path = require('path');
 
-module.exports = function pitch(modulePath) {
-  console.log('Processing', this.resourcePath);
-  const cachePath = path.join(this.options.context, this.query.cacheDirectory);
+const getCachePath = require('./utils/cache-directory-path.js');
 
-  if (!fs.existsSync(cachePath)) {
-    fs.mkdirSync(cachePath);
-  }
+module.exports = function pitch(modulePath) {
+  console.log('Looking up in cache', this.resourcePath);
+  const cachePath = getCachePath(this.options.context, this.query.cacheDirectory);
 
   const cachedFileNames = this.fs.fileSystem.readdirSync(cachePath);
 
