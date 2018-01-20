@@ -17,8 +17,8 @@ module.exports = function pitch(modulePath) {
   if (cachedFileNames.includes(fileKey)) {
     const cachedFilePath = path.join(cachePath, fileKey);
     const cachedFileContent = this.fs.fileSystem.readFileSync(cachedFilePath);
-    console.log('Found in cache: ', cachedFileContent);
-    return cachedFileContent;
+    console.log('Found in cache: ', cachedFileContent.toString());
+    return JSON.parse(cachedFileContent).source;
   } else {
     console.log('Did not find in cache.');
     return;
